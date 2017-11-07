@@ -16,11 +16,15 @@
 
 ENV['RACK_ENV'] = 'test'
 
-require 'app.rb'
+# require our Sinatra app file
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
+
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
-Capybara.app = BattleApp
+
+# tell Capybara about our app class
+Capybara.app = Battle
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
