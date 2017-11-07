@@ -22,8 +22,6 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
-
-# tell Capybara about our app class
 Capybara.app = Battle
 
 RSpec.configure do |config|
@@ -39,6 +37,7 @@ RSpec.configure do |config|
     # ...rather than:
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+    config.include Capybara::DSL
   end
 
   # rspec-mocks config goes here. You can use an alternate test double
