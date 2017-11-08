@@ -6,3 +6,4 @@ feature 'Allows Player 1 to check Player 2\'s hitpoints' do
     click_button 'View hitpoints'
   end
 end
+''
