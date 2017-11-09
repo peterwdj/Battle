@@ -5,7 +5,7 @@
 </head>
 <body>
   <h1><%= @player1 %> vs. <%= @player2 %></h1>
-  <p>Player 2: 100HP</p>
+  <p>Player 2: <%= @player2_hp %>HP</p>
   <form method="get" action="/attack">
     <input type="submit" value ="Attack!">
   </form>
