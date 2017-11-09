@@ -1,5 +1,17 @@
-<form method='post' action='/names'>
-  <input type="text" name="player1">
-  <input type="text" name="player2">
-  <input type="submit" value = "Submit">
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="<%= url("/index.css") %>">
+</head>
+<body>
+  <div class="enter-names">
+    <form method='post' action='/names'>
+      <h1>Player 1:</h1>
+      <input type="text" name="player1">
+      <h1>Player 2:</h1>
+      <input type="text" name="player2">
+      <input id="submit-button" type="submit" value = "Start game">
+    </form>
+  </div>
+</body>
+</html>

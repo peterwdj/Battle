@@ -5,7 +5,7 @@ feature 'Allowing two players to enter their names' do
     visit '/'
     fill_in 'player1', with: 'Majd'
     fill_in 'player2', with: 'Peter'
-    click_button 'Submit'
+    click_button 'Start game'
     expect(page).to have_text('Majd vs. Peter')
   end
 end
