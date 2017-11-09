@@ -18,5 +18,10 @@ class Battle < Sinatra::Base
     erb :play
   end
 
+  get '/confirm_attack' do
+    @player2 = session[:player2]
+    erb :confirm_attack
+  end
+
   run! if app_file == $PROGRAM_NAME
 end
