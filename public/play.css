@@ -1,3 +1,18 @@
 body {
-  background-color: red;
+  background-color: #f45942;
+}
+
+h1 {
+  color: blue;
+  font-family: garamond;
+  font-size: 64px;
+  border: 3px solid black;
+  text-align: center;
+}
+
+p {
+  color: #6ab510;
+  text-align: right;
+  font-weight: bold;
+  font-size: 24px;
 }
