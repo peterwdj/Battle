@@ -1,5 +1,4 @@
 require 'sinatra/base'
-
 class Battle < Sinatra::Base
   enable :sessions
 
@@ -10,7 +9,7 @@ class Battle < Sinatra::Base
   post '/names' do
     session[:player1] = params[:player1]
     session[:player2] = params[:player2]
-    redirect'/play'
+    redirect '/play'
   end
 
   get '/play' do
@@ -19,5 +18,5 @@ class Battle < Sinatra::Base
     erb :play
   end
 
-  run! if app_file == $0
+  run! if app_file == $PROGRAM_NAME
 end
