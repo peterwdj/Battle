@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 feature 'Reduce hitpoints' do
   scenario 'Reducing Player 2\'s HP after Player 1 attacks' do
     sign_in_and_play

@@ -4,8 +4,8 @@
   <link rel="stylesheet" type="text/css" href="<%= url("/style.css") %>">
 </head>
 <body>
-  <h1><%= @player1 %> vs. <%= @player2 %></h1>
-  <p>Player 2: <%= @player2_hp %>HP</p>
+  <h1><%= @player1.name %> vs. <%= @player2.name %></h1>
+  <p>Player 2: <%= @player2.hitpoints %>HP</p>
   <form method="get" action="/attack">
     <input type="submit" value ="Attack!">
   </form>

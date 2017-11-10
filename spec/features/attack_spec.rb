@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 feature 'Allows Player 1 to attack Player 2' do
   scenario 'Rendering attack button' do
     sign_in_and_play
