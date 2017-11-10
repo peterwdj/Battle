@@ -10,26 +10,26 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    $game = Game.new(Player.new(params[:player1]), Player.new(params[:player2]))
+    Game.create(Game.new(Player.new(params[:player1]), Player.new(params[:player2])))
     redirect '/play'
   end
 
   get '/play' do
-    @player1 = $game.player1
-    @player2 = $game.player2
-    @turn = $game.attacker
+    @player1 = Game.access.player1
+    @player2 = Game.access.player2
+    @turn = Game.access.attacker
     erb :play
   end
 
   get '/attack' do
-    @defender = $game.defender
-    $game.attack
-    $game.finish? ? redirect('/gameover') : erb(:attack)
+    @defender = Game.access.defender
+    Game.access.attack
+    Game.access.finish? ? redirect('/gameover') : erb(:attack)
   end
 
   get '/gameover' do
-    @winner = $game.attacker.name
-    @loser = $game.defender.name
+    @winner = Game.access.attacker.name
+    @loser = Game.access.defender.name
     erb :gameover
   end
 
