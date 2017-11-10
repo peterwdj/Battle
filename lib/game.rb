@@ -10,10 +10,14 @@ class Game
 
   def attack
     @attacker.attack(@defender)
-    switch_turns
+    switch_turns unless finish?
   end
 
   def switch_turns
     @attacker, @defender = @defender, @attacker
+  end
+
+  def finish?
+    player1.hitpoints <= 0 || player2.hitpoints <= 0
   end
 end

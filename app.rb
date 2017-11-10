@@ -24,7 +24,13 @@ class Battle < Sinatra::Base
   get '/attack' do
     @defender = $game.defender
     $game.attack
-    erb :attack
+    $game.finish? ? redirect('/gameover') : erb(:attack)
+  end
+
+  get '/gameover' do
+    @winner = $game.attacker.name
+    @loser = $game.defender.name
+    erb :gameover
   end
 
   run! if app_file == $PROGRAM_NAME
