@@ -1,12 +1,12 @@
 class Game
   attr_reader :player1, :player2, :attacker, :defender
 
-  def self.create(instance)
-    @game_instance = instance
+  def self.create(player1, player2)
+    @game = Game.new(player1, player2)
   end
 
-  def self.access
-    @game_instance
+  def self.instance
+    @game
   end
 
   def initialize(player1, player2)
