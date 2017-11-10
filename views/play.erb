@@ -5,6 +5,7 @@
 </head>
 <body>
   <h1><%= @player1.name %> vs. <%= @player2.name %></h1>
+  <h3><%= @turn.name %>'s turn to attack!</h3>
   <p>Player 2: <%= @player2.hitpoints %>HP</p>
   <form method="get" action="/attack">
     <input type="submit" value ="Attack!">

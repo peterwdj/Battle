@@ -10,6 +10,13 @@ h1 {
   margin-top: 100px;
 }
 
+h3 {
+  font-family: garamond;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 p {
   color: #6ab510;
   text-align: right;
