@@ -17,11 +17,20 @@ h3 {
   text-align: center;
 }
 
-p {
+#player_1 {
   color: #6ab510;
-  text-align: right;
+  float: left;
   font-weight: bold;
   font-size: 24px;
+  display: inline-block;
+}
+
+#player_2 {
+  color: #6ab510;
+  float: right;
+  font-weight: bold;
+  font-size: 24px;
+  display: inline-block;
 }
 
 .enter-names {
