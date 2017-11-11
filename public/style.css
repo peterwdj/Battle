@@ -33,6 +33,20 @@ h3 {
   display: inline-block;
 }
 
+form input .btn {
+  margin-left: auto;
+  margin-right: auto;
+  color: #000;
+  background-color: #fe0;
+  border: 0px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  padding: 40px 80px;
+  margin-top: 100px;
+}
+
 .enter-names {
   margin-top: 100px;
   margin-left: auto;
@@ -46,7 +60,7 @@ h3 {
   color: #fff;
 }
 
-.enter-names #submit-button {
+#submit-button {
   margin-left: auto;
   margin-right: auto;
   color: #000;
